@@ -2,5 +2,13 @@ services:
   - type: worker
     name: telegram-bot
     env: python
+    region: Frankfurt
+    plan: free
+    branch: main
     buildCommand: pip install -r requirements.txt
     startCommand: python Main_Bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: "8665433685:AAGbDqlZiYVenyVMNe2B8xvpBrLPl3nEhlg"
+      - key: ADMIN_ID
+        value: "718325299"
