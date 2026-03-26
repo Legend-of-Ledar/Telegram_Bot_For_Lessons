@@ -12,8 +12,10 @@ dp.include_router(admin.router)
 
 async def main():
     print("Бот запущен...")
-    await dp.start_polling(bot)
+    try:
+        await dp.start_polling(bot)
+    finally:
+        await bot.session.close()  # закрываем сессию для безопасности
 
 if __name__ == "__main__":
     asyncio.run(main())
-
