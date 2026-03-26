@@ -102,7 +102,7 @@ async def get_time_interval(message: Message, state: FSMContext):
     )
 
     await message.answer(
-        f"Спасибо!🤎\n{student.name}\nПредмет: {student.subject}\nДни: {', '.join(student.days)}\nВремя: {student.time}"
+        f"Спасибо!🤎{student.name}\nПредмет: {student.subject}\nДни: {', '.join(student.days)}\nВремя: {student.time}"
     )
 
     telegram_tag = f"@{message.from_user.username}" if message.from_user.username else f"ID:{message.from_user.id}"
