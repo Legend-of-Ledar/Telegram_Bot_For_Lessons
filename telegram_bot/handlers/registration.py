@@ -3,10 +3,11 @@ from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from aiogram.filters import CommandStart
+
 from .filters import IsUser
-from keyboards.registration_keyboards import subject_keyboard, days_keyboard, new_registration_keyboard
-from models.student import Student
-from config.config import CHAT_ID
+from telegram_bot.keyboards.registration_keyboards import subject_keyboard, days_keyboard, new_registration_keyboard
+from telegram_bot.models.student import Student
+from telegram_bot.config.config import CHAT_ID
 
 router = Router()
 router.message.filter(IsUser())

@@ -1,5 +1,5 @@
 from aiogram.filters import BaseFilter
-from config.config import CHAT_ID
+from telegram_bot.config.config import CHAT_ID
 
 class IsUser(BaseFilter):
     async def __call__(self, event):
