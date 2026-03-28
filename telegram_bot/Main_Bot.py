@@ -1,6 +1,11 @@
-import asyncio
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
+import asyncio
+
 from handlers import registration, admin
 from config.config import TOKEN
 
