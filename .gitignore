@@ -5,4 +5,4 @@ __pycache__/
 .env
 .idea/
 .DS_Store
-telegram_bot/config/Token.env
+Token.env

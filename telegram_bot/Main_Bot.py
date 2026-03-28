@@ -1,8 +1,8 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
-from telegram_bot.config.config import TOKEN
-from telegram_bot.handlers import registration, admin
+from config.config import TOKEN
+from handlers import registration, admin
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
